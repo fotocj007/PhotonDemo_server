@@ -1,0 +1,14 @@
+/Users/fotoable/Documents/onlinefiles/csharep/ConsoleDemo/ConsoleDemo/Mysql/bin/Debug/Mysql.exe
+/Users/fotoable/Documents/onlinefiles/csharep/ConsoleDemo/ConsoleDemo/Mysql/bin/Debug/Mysql.pdb
+/Users/fotoable/Documents/onlinefiles/csharep/ConsoleDemo/ConsoleDemo/Mysql/bin/Debug/mysql.data.dll
+/Users/fotoable/Documents/onlinefiles/csharep/ConsoleDemo/ConsoleDemo/Mysql/obj/Debug/Mysql.csprojAssemblyReference.cache
+/Users/fotoable/Documents/onlinefiles/csharep/ConsoleDemo/ConsoleDemo/Mysql/obj/Debug/Mysql.csproj.CoreCompileInputs.cache
+/Users/fotoable/Documents/onlinefiles/csharep/ConsoleDemo/ConsoleDemo/Mysql/obj/Debug/Mysql.csproj.CopyComplete
+/Users/fotoable/Documents/onlinefiles/csharep/ConsoleDemo/ConsoleDemo/Mysql/obj/Debug/Mysql.exe
+/Users/fotoable/Documents/onlinefiles/csharep/ConsoleDemo/ConsoleDemo/Mysql/obj/Debug/Mysql.pdb
+/Users/fotoable/Documents/onlinefiles/csharep/ConsoleDemo/ConsoleDemo/Mysql/bin/Debug/BouncyCastle.Crypto.dll
+/Users/fotoable/Documents/onlinefiles/csharep/ConsoleDemo/ConsoleDemo/Mysql/bin/Debug/Google.Protobuf.dll
+/Users/fotoable/Documents/onlinefiles/csharep/ConsoleDemo/ConsoleDemo/Mysql/bin/Debug/Renci.SshNet.dll
+/Users/fotoable/Documents/onlinefiles/csharep/ConsoleDemo/ConsoleDemo/Mysql/bin/Debug/Google.Protobuf.xml
+/Users/fotoable/Documents/onlinefiles/csharep/ConsoleDemo/ConsoleDemo/Mysql/bin/Debug/MySql.Data.xml
+/Users/fotoable/Documents/onlinefiles/csharep/ConsoleDemo/ConsoleDemo/Mysql/bin/Debug/Renci.SshNet.xml

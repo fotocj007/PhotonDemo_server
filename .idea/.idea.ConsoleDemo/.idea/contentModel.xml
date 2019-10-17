@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="Common" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Common.csproj" t="IncludeRecursive" />
+        <e p="EventCode.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="OperationCode.cs" t="Include" />
+        <e p="ParameterCode.cs" t="Include" />
+        <e p="PlayerData.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="ReturnCode.cs" t="Include" />
+        <e p="Toos" t="Include">
+          <e p="DictTool.cs" t="Include" />
+        </e>
+        <e p="Vector3Data.cs" t="Include" />
+      </e>
+      <e p="ConsoleDemo.sln" t="IncludeFlat" />
+      <e p="MyGameServer" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="clientPeer.cs" t="Include" />
+        <e p="Hander" t="Include">
+          <e p="BaseHandler.cs" t="Include" />
+          <e p="DefaultHandler.cs" t="Include" />
+          <e p="LoginHander.cs" t="Include" />
+          <e p="RegisterHandler.cs" t="Include" />
+          <e p="SysPlayerHandler.cs" t="Include" />
+          <e p="SysPositionHandler.cs" t="Include" />
+        </e>
+        <e p="hibernate.cfg.xml" t="Include" />
+        <e p="log4net.config" t="Include" />
+        <e p="Manager" t="Include">
+          <e p="IUserManager.cs" t="Include" />
+          <e p="UserManager.cs" t="Include" />
+        </e>
+        <e p="Mappings" t="Include">
+          <e p="User.hbm.xml" t="Include" />
+        </e>
+        <e p="Model" t="Include">
+          <e p="User.cs" t="Include" />
+        </e>
+        <e p="MyGameServer.cs" t="Include" />
+        <e p="MyGameServer.csproj" t="IncludeRecursive" />
+        <e p="NHibernateHelper.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Threads" t="Include">
+          <e p="SyncPositionThread.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Mysql" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Mysql.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Nbibernate" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="hibernate.cfg.xml" t="Include" />
+        <e p="Manager" t="Include">
+          <e p="DbManager.cs" t="Include" />
+          <e p="IDbManager.cs" t="Include" />
+        </e>
+        <e p="Mappings" t="Include">
+          <e p="DbModel.hbm.xml" t="Include" />
+        </e>
+        <e p="Model" t="Include">
+          <e p="DbModel.cs" t="Include" />
+        </e>
+        <e p="Nbibernate.csproj" t="IncludeRecursive" />
+        <e p="NHibernateHelper.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_ConsoleDemo.557094636.00" t="ExcludeRecursive" />
+  </component>
+</project>
