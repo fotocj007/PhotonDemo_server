@@ -40,7 +40,7 @@ namespace MyGameServer.Hander
                 response.ReturnCode = (short) ReturnCode.Failed;
             }
 
-           
+
             //给客户端响应
             peer.SendOperationResponse(response, sendParameters);
         }

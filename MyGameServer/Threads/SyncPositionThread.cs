@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading;
 using System.Xml.Serialization;
 using Common;
@@ -26,12 +27,12 @@ namespace MyGameServer.Threads
 
         private void UpdatePos()
         {
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
 
             while (true)
             {
-                Thread.Sleep(200);
-                
+                Thread.Sleep(500);
+
                 //位置同步
                 SendPoint();
             }
@@ -39,40 +40,37 @@ namespace MyGameServer.Threads
 
         private void SendPoint()
         {
-            List<PlayerData> playerDataList = new List<PlayerData>();
-            foreach (ClientPeer peer in MyGameServer.Instance.peerList)
-            {
+            var playerDataList = new List<PlayerData>();
+            foreach (var peer in MyGameServer.Instance.peerList)
                 if (string.IsNullOrEmpty(peer.username) == false)
                 {
-                    PlayerData playerD = new PlayerData();
+                    var playerD = new PlayerData();
                     playerD.Username = peer.username;
-                    playerD.Pos = new Vector3Data(){x=peer.x,y=peer.y,z=peer.z};
-                    
+                    playerD.Pos = new Vector3Data {x = peer.x, y = peer.y, z = peer.z};
+
                     playerDataList.Add(playerD);
                 }
-            }
             
-            StringWriter sw = new StringWriter();
-            XmlSerializer serializer = new XmlSerializer(typeof(List<PlayerData>));
-            serializer.Serialize(sw,playerDataList);
+            if(!playerDataList.Any())
+                return;
+
+            var sw = new StringWriter();
+            var serializer = new XmlSerializer(typeof(List<PlayerData>));
+            serializer.Serialize(sw, playerDataList);
             sw.Close();
 
-            string playerDataString = sw.ToString();
-            
-            Dictionary<byte,object> data = new Dictionary<byte, object>();
-            data.Add((byte)ParameterCode.PlayerDataList,playerDataString);
-            
-            foreach (ClientPeer peer in MyGameServer.Instance.peerList)
-            {
+            var playerDataString = sw.ToString();
+
+            var data = new Dictionary<byte, object>();
+            data.Add((byte) ParameterCode.PlayerDataList, playerDataString);
+
+            foreach (var peer in MyGameServer.Instance.peerList)
                 if (string.IsNullOrEmpty(peer.username) == false)
                 {
-                   EventData ed = new EventData((byte)EventCode.SyncPosition);
-                   ed.Parameters = data;
-                   peer.SendEvent(ed,new SendParameters());
+                    var ed = new EventData((byte) EventCode.SyncPosition);
+                    ed.Parameters = data;
+                    peer.SendEvent(ed, new SendParameters());
                 }
-            }
-            
         }
-        
     }
 }

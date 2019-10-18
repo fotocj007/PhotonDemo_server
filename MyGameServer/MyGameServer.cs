@@ -21,20 +21,20 @@ namespace MyGameServer
         public Dictionary<OperationCode, BaseHandler> HandlerDict = new Dictionary<OperationCode, BaseHandler>();
 
         public List<ClientPeer> peerList = new List<ClientPeer>();
-        
+
         //开启一个线程进行位置同步
-        private SyncPositionThread syncPosThread = new SyncPositionThread();
-        
+        private readonly SyncPositionThread syncPosThread = new SyncPositionThread();
+
         public new static MyGameServer Instance { get; private set; }
-        
+
         //客户端创建链接
         //使用一个peerbase表示一个客户端连接
         protected override PeerBase CreatePeer(InitRequest initRequest)
         {
             log.Info("Client  Connect----------");
             //创建一个客户端返回给引擎,引擎自动管理
-            
-            ClientPeer peer = new ClientPeer(initRequest);
+
+            var peer = new ClientPeer(initRequest);
             peerList.Add(peer);
             return peer;
         }
@@ -68,7 +68,7 @@ namespace MyGameServer
 
             var syPosHandler = new SysPositionHandler();
             HandlerDict.Add(syPosHandler.OpCode, syPosHandler);
-            
+
             var syPlayerHandler = new SysPlayerHandler();
             HandlerDict.Add(syPlayerHandler.OpCode, syPlayerHandler);
         }

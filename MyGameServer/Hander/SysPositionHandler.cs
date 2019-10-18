@@ -27,11 +27,10 @@ namespace MyGameServer.Hander
             var z =
                 (float) DictTool.GetValue(operationRequest.Parameters,
                     (byte) ParameterCode.Z);
-            
+
             peer.x = x;
             peer.y = y;
             peer.z = z;
-            
         }
     }
 }

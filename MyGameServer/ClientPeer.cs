@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Common;
 using Common.Toos;
 using Photon.SocketServer;
@@ -7,10 +8,9 @@ namespace MyGameServer
 {
     public class ClientPeer : Photon.SocketServer.ClientPeer
     {
+        public string username;
         public float x, y, z;
 
-        public string username;
-        
         //创建客户端
         public ClientPeer(InitRequest initRequest) : base(initRequest)
         {
@@ -47,6 +47,18 @@ namespace MyGameServer
         protected override void OnDisconnect(DisconnectReason reasonCode, string reasonDetail)
         {
             MyGameServer.log.Info("Client------断开了");
+            
+            //告诉其他客户端有人离开
+            foreach (var tempPeer in MyGameServer.Instance.peerList)
+                if (string.IsNullOrEmpty(tempPeer.username) == false && tempPeer != this)
+                {
+                    var ed = new EventData((byte) EventCode.ClosePlayer);
+                    var datas = new Dictionary<byte, object>();
+                    datas.Add((byte) ParameterCode.UserName, this.username);
+                    ed.Parameters = datas;
+                    tempPeer.SendEvent(ed, new SendParameters());
+                }
+            
             MyGameServer.Instance.peerList.Remove(this);
         }
     }

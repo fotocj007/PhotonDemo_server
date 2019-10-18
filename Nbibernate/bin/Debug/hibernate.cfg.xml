@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-configuration  xmlns="urn:nhibernate-configuration-2.2" >
+    <session-factory>
+        <property name="connection.driver_class">NHibernate.Driver.MySqlDataDriver</property>
+        
+        <!-- mysql驱动这里是 MySQL5Dialect, mysql服务版本也是5.7(最新版8.1好像链接不上) -->
+        <property name="dialect">NHibernate.Dialect.MySQL5Dialect</property>
+        
+        <!-- 数据库连接信息 -->
+        <property name="connection.connection_string">
+            Server=101.200.130.34;Database=photon_demo;User Id=root;Password=Cloud123456789123;
+        </property>
+
+        <!-- 调试时是否显示sql语句 -->
+        <property name="show_sql">true</property>
+        
+        <!-- 有的版本需要添加下面这一项 -->
+        <!-- <mapping assembly="Nbibernate"/> -->  
+    </session-factory>
+</hibernate-configuration>

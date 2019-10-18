@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Nbibernate.Model;
 using NHibernate.Criterion;
 using NHibernate.Util;
+using System.Dynamic;
 
 namespace Nbibernate.Manager
 {
@@ -70,7 +71,8 @@ namespace Nbibernate.Manager
                 //使用List查询,这里取第一个返回
                 DbModel msg = null;
                 var msgArr = iCriteria.List<DbModel>();
-                if (msgArr.Any()) msg = msgArr[0];
+    
+                if ((bool) msgArr.FirstOrNull()) msg = msgArr[0];
 
                 return msg;
             }
